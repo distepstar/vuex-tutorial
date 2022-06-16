@@ -3,14 +3,16 @@ import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBV6lnKZsdsUMq9LyEhWC6Vv45wKHzQ6hg",
-  authDomain: "vuex-firebase-auth-94244.firebaseapp.com",
-  projectId: "vuex-firebase-auth-94244",
-  storageBucket: "vuex-firebase-auth-94244.appspot.com",
-  messagingSenderId: "837732525491",
-  appId: "1:837732525491:web:18944557092698898c57c6",
-  measurementId: "G-7ZK4CGXDNP"
+  apiKey: process.env.VUE_APP_FIREBASE_API,
+  authDomain: process.env.VUE_APP_FIREBASE_AUTHDOMAIN,
+  projectId: process.env.VUE_APP_FIREBASE_PROJECTID,
+  storageBucket: process.env.VUE_APP_FIREBASE_STORAGEBUCKET,
+  messagingSenderId: process.env.VUE_APP_FIREBASE_MESSAGINGSENDERID,
+  appId: process.env.VUE_APP_FIREBASE_APPID,
+  measurementId: process.env.VUE_APP_FIREBASE_MEASUREMENTID,
 };
+
+
 
 // init firebase
 initializeApp(firebaseConfig);
